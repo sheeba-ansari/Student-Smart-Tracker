@@ -63,7 +63,6 @@ Student-Smart-Tracker/
 ### 1. Install Dependencies
 
 Open the terminal in the project folder and run:
-
 ```bash
 npm install
 ### 2. Start the Backend
@@ -75,9 +74,11 @@ node Backend/server.js
 ### 3. Open the Application
 
 Open the frontend in your browser using your local development server.
+
 ### 4. Make Sure MySQL Is Running
 
 Make sure MySQL is running before using the application.
+
 ## Future Improvements
 
 - Student login and authentication
@@ -86,6 +87,7 @@ Make sure MySQL is running before using the application.
 - Pagination
 - Student profile pages
 - Live deployment
+
 ## Author
 
 Developed by Sheeba as a BCA project.
