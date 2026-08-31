@@ -1,7 +1,7 @@
 # Student Smart Tracker
 ## Project Screenshot
 
-![Student Smart Tracker Dashboard](screenshots/dashboard.png)
+![Student Smart Tracker Dashboard](screenshots/dashboard.png.png)
 
 Student Smart Tracker is a web-based student management system.
 
