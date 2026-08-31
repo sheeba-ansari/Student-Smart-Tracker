@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Smart Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Smart Tracker</h1>
+        <p>Manage and track student information</p>
+    </header>
+
+    <main>
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+            <h2>Dashboard</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Total Students</h3>
+                    <p id="totalStudents">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Average Marks</h3>
+                    <p id="averageMarks">0%</p>
+                </div>
+
+                <div class="card">
+                    <h3>Average Attendance</h3>
+                    <p id="averageAttendance">0%</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Student Management -->
+        <section class="student-section">
+
+            <div class="section-header">
+                <h2>Student Management</h2>
+
+                <button id="addStudentBtn">
+                    + Add Student
+                </button>
+            </div>
+            <!-- Add Student Form -->
+
+<div id="studentForm" class="student-form">
+
+    <h3>Add New Student</h3>
+
+    <form id="addStudentForm">
+
+        <input
+            type="number"
+            id="rollNo"
+            placeholder="Roll Number"
+            required
+        >
+
+        <input
+            type="text"
+            id="studentName"
+            placeholder="Student Name"
+            required
+        >
+
+        <input
+            type="text"
+            id="course"
+            placeholder="Course"
+            value="BCA"
+            required
+        >
+
+        <input
+            type="number"
+            id="marks"
+            placeholder="Marks (%)"
+            min="0"
+            max="100"
+            required
+        >
+
+        <input
+            type="number"
+            id="attendance"
+            placeholder="Attendance (%)"
+            min="0"
+            max="100"
+            required
+        >
+
+        <div class="form-buttons">
+
+            <button type="submit">
+                Add Student
+            </button>
+
+            <button type="button" id="cancelBtn">
+                Cancel
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+<!-- Edit Student Form -->
+
+<div id="editStudentForm" class="student-form" style="display: none;">
+
+    <h3>Edit Student</h3>
+
+    <form id="editForm">
+
+        <input
+            type="number"
+            id="editRollNo"
+            placeholder="Roll Number"
+            required
+        >
+
+        <input
+            type="text"
+            id="editStudentName"
+            placeholder="Student Name"
+            required
+        >
+
+        <input
+            type="text"
+            id="editCourse"
+            placeholder="Course"
+            required
+        >
+
+        <input
+            type="number"
+            id="editMarks"
+            placeholder="Marks (%)"
+            min="0"
+            max="100"
+            required
+        >
+
+        <input
+            type="number"
+            id="editAttendance"
+            placeholder="Attendance (%)"
+            min="0"
+            max="100"
+            required
+        >
+
+        <div class="form-buttons">
+
+            <button type="submit">
+                Update Student
+            </button>
+
+            <button type="button" id="editCancelBtn">
+                Cancel
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+
+            <!-- Search -->
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search student by name..."
+            >
+
+
+            <!-- Student Table -->
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Roll No.</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Marks</th>
+                        <th>Attendance</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentTableBody">
+                    <!-- Students will appear here using JavaScript -->
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
