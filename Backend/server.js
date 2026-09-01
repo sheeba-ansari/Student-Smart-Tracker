@@ -1,13 +1,16 @@
 const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql2");
-const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "Ansariii91725",
-    database: "student_tracker"
+ const db = mysql.createConnection({
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    ssl: {
+        rejectUnauthorized: true
+    }
 });
-
 db.connect(function(err) {
     if (err) {
         console.error("MySQL connection failed:", err);
