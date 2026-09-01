@@ -2,7 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql2");
 const fs = require("fs");
+const path = require("path");
 const db = mysql.createConnection({
+    host: process.env.DB_HOST,
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
     user: process.env.DB_USER,
@@ -27,7 +29,7 @@ const PORT = 5000;
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static("../Frontend"));
+app.use(express.static(path.join(__dirname, "../Frontend")));
 
 app.get("/", function(req, res) {
     res.json({
