@@ -8,7 +8,7 @@ const mysql = require("mysql2");
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
     ssl: {
-        rejectUnauthorized: true
+        rejectUnauthorized: false
     }
 });
 db.connect(function(err) {
