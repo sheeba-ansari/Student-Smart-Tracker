@@ -5,7 +5,7 @@ const averageMarks = document.getElementById("averageMarks");
 const averageAttendance = document.getElementById("averageAttendance");
 let students = [];
 
-const API_URL = "http://localhost:5000/api/students";
+const API_URL = "https://student-smart-tracker.onrender.com/api/students";
 
 async function loadStudents() {
     try {
